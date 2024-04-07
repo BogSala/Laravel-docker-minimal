@@ -12,8 +12,6 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-RUN mkdir -p /var/www/html
-
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
