@@ -24,11 +24,5 @@ restart:
 remake:
 	docker compose  down -v
 	docker compose  up -d
-exec:
-	docker compose exec -it app $(c)
-a:
-	docker compose exec -it app php artisan $(c)
-composer:
-	docker compose exec -it app composer $(c)
 db-clear:
 	sudo rm -rf docker/database
